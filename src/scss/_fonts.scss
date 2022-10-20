@@ -1,1 +1,4 @@
-// @include font-face("test", "../fonts/test", 400, normal);
+@include font-face("Jura", "../fonts/Jura-Regular", 400, normal);
+@include font-face("Jura", "../fonts/Jura-Medium", 500, normal);
+@include font-face("Jura", "../fonts/Jura-SemiBold", 600, normal);
+@include font-face("Jura", "../fonts/Jura-Bold", 700, normal);
