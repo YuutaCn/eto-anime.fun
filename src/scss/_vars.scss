@@ -1,7 +1,7 @@
 // colors
 :root {
   // base
-  --font-family: "Poiret One", sans-serif;
+  --font-family: "Jura", sans-serif;
   --content-width: 1440px;
   --container-offset: 240px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -22,7 +22,8 @@
   --md_grey-color: #EAEAEA;
   --grey-color: #999999;
   --grey_shade-color: #666666;
-  --black-color: #333333;
+  --dark-color: #333333;
+  --black-color: black;
   --black-color-20: rgba(0, 0, 0, 0.2);
   --lime_color-color: #DAFFD1;
   --bone-color: #FFF5D1;
