@@ -1,4 +1,4 @@
-export const NEWS = [
+const NEWS = [
   {
     "tittle": "Ищем редактора",
     "href": "#no-scrolling"
@@ -17,7 +17,7 @@ export const NEWS = [
   },
 ]
 
-export class NewsCard {
+class NewsCard {
   render() {
     let htmlNews = '';
     NEWS.forEach(({ tittle, href }) => {
@@ -32,7 +32,6 @@ export class NewsCard {
     });
     document.querySelector('.aside__news-list').innerHTML = htmlNews;
   }
-
 }
 let card = new NewsCard()
 card.render()

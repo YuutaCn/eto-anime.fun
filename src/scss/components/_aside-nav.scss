@@ -200,4 +200,87 @@
       }
     }
   }
+
+  &__new-series {
+
+    &-tittle {
+      color: var(--black-color);
+      text-align: center;
+      font-family: 'Jura';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 19px;
+      margin-bottom: 10px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+
+      &-item {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        background: var(--dark-color);
+        gap: 7px;
+
+        &:hover {
+
+          & a {
+            transform: translate3d(3%, -10%, 0);
+          }
+        }
+
+        &-href {
+          width: 100%;
+          height: 45px;
+          display: flex;
+          flex-direction: row;
+          background: var(--grey_light-color);
+          gap: 7px;
+          transition: transform 250ms var(--default-cubic);
+
+          &:hover {
+            transform: translate3d(3%, -10%, 0);
+          }
+        }
+
+        &-img {
+          min-width: 45px;
+          max-height: 45px;
+          height: 45px;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 3px 0px;
+
+          &-name {
+            color: var(--black-color);
+            font-family: 'Jura';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 11px;
+          }
+
+          &-series {
+            color: var(--red_input-color);
+            font-family: 'Jura';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 13px;
+          }
+        }
+      }
+    }
+  }
 }
