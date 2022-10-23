@@ -1,0 +1,35 @@
+// colors
+:root {
+  // base
+  --font-family: "Jura", sans-serif;
+  --content-width: 1440px;
+  --container-offset: 240px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --primary-color: #A65CF0;
+  --primary_light-color: #C998FB;
+  --primary_shade-color: #7033AC;
+  --pink_light-color: #F8EFFF;
+  --pink_violet-color: #EBD1FF;
+  --secondary-color: #FF862F;
+  --secondary_light-color: #FFBD59;
+  --secondary_shade-color: #BB370E;
+  --red_input-color: #FF6972;
+  --green_input-color: #65D153;
+  --gold-color: #D5B986;
+  --white-color: #fff;
+  --grey_light-color: #f7f7f7;
+  --md_grey-color: #EAEAEA;
+  --grey-color: #999999;
+  --grey_shade-color: #666666;
+  --dark-color: #333333;
+  --black-color: black;
+  --black-color-20: rgba(0, 0, 0, 0.2);
+  --lime_color-color: #DAFFD1;
+  --bone-color: #FFF5D1;
+
+  // cubic-bezier
+  --page-cubic: cubic-bezier(.58,.13,.46,.94);
+  --default-cubic: cubic-bezier(.09,.44,.46,.91);
+}
