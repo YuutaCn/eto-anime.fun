@@ -49,6 +49,8 @@ const paths = {
   buildJsFolder: `${buildFolder}/js`,
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
+  animeFolder: `${srcFolder}/ap`,
+  animeFolderBuild: `${buildFolder}/ap`,
 };
 
 let isProd = false; // dev by default
@@ -255,6 +257,19 @@ const htmlInclude = () => {
     .pipe(browserSync.stream());
 }
 
+const htmlIncludeAp = () => {
+  return src([`${paths.animeFolder}/*.html`])
+    .pipe(fileInclude({
+      prefix: '@',
+      basepath: '@file'
+    }))
+    // .pipe(typograf({
+    //   locale: ['ru', 'en-US']
+    // }))
+    .pipe(dest(paths.animeFolderBuild))
+    .pipe(browserSync.stream());
+}
+
 const watchFiles = () => {
   browserSync.init({
     server: {
@@ -264,8 +279,9 @@ const watchFiles = () => {
 
   watch(paths.srcScss, styles);
   watch(paths.srcFullJs, scripts);
-  watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
+  watch(`${paths.srcPartialsFolder}/**/**.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
+  watch(`${paths.animeFolder}**/**.html`, htmlIncludeAp);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
@@ -324,11 +340,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, htmlIncludeAp, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
+exports.backend = series(clean, htmlInclude, htmlIncludeAp, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, htmlIncludeAp, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 
