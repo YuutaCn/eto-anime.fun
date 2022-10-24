@@ -11,3 +11,5 @@ if (document.querySelector('.anime-page')) {
   import('./components/anime-pages')
 };
 
+import './components/swiper'
+
