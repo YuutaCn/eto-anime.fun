@@ -41,6 +41,7 @@ h1 {
     column-gap: 30px;
 
     &-cover {
+      display: flex;
       width: 100%;
       height: 380px;
       pointer-events: none;
@@ -61,17 +62,17 @@ h1 {
         flex-direction: column;
 
         &-item {
+          display: grid;
+          grid-template-columns: 150px 1fr;
           position: relative;
           width: 100%;
-          height: 40px;
-          display: flex;
+          min-height: 40px;
+          padding: 8px 0px;
           flex-direction: row;
           align-items: center;
           border-bottom: solid 1px var(--black-color);
 
           & .anime-sheet-text {
-            position: absolute;
-            left: 166px;
             color: var(--black-color);
             font-family: 'Jura';
             font-style: normal;
@@ -79,6 +80,13 @@ h1 {
             font-size: 22px;
             line-height: 26px;
             transition: color 250ms var(--default-cubic);
+          }
+
+          &-translate,
+          &-genre {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
           }
 
           & .link {

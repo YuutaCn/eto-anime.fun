@@ -48,5 +48,9 @@
     height: 100%;
     overflow: hidden;
     pointer-events: none;
+
+    &-img {
+      object-position: 0px -20px;
+    }
   }
 }
