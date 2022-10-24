@@ -27,7 +27,7 @@ const ANIME_PAGE_1 = [
     ],
     "season": "зима 2018",
     "status": "завершенный",
-    "type": "тв",
+    "type": "TV сериал",
     "studio": "A-1 Pictures",
     "genre": [
       { "a": "приключения" },
@@ -64,7 +64,7 @@ const ANIME_PAGE_1 = [
     ],
     "season": "весна 2015",
     "status": "завершенный",
-    "type": "тв",
+    "type": "TV сериал",
     "studio": "Doga Kobo",
     "genre": [
       { "a": "драма" },
@@ -104,7 +104,7 @@ const ANIME_PAGE_1 = [
     ],
     "season": "осень 1999",
     "status": "онгоинг",
-    "type": "тв",
+    "type": "TV сериал",
     "studio": "Toei Animation",
     "genre": [
       { "a": "сёнен" },
@@ -153,7 +153,7 @@ const ANIME_PAGE_1 = [
     ],
     "season": "осень 2022",
     "status": "онгоинг",
-    "type": "тв",
+    "type": "TV сериал",
     "studio": "Bones",
     "genre": [
       { "a": "экшен" },
@@ -188,7 +188,7 @@ const ANIME_PAGE_1 = [
     ],
     "season": "осень 2006",
     "status": "завершенный",
-    "type": "тв",
+    "type": "TV сериал",
     "studio": "Madhouse",
     "genre": [
       { "a": "сёнен" },

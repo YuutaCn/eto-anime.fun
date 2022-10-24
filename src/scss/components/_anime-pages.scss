@@ -123,9 +123,32 @@ h1 {
           & .li-link {
             display: flex;
             flex-direction: row;
-            gap: 7px;
+            gap: 13px;
 
             & li {
+              position: relative;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              &::before {
+                content: '';
+                position: absolute;
+                right: -7px;
+                width: 1px;
+                height: 100%;
+                background: var(--black-color-20);
+              }
+
+              &:nth-last-child(1) {
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  width: 0px;
+                  height: 0%;
+                }
+              }
 
               & a {
                 color: var(--black-color);
