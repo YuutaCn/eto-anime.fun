@@ -3,7 +3,7 @@ class NewSeries {
   render() {
     let htmlNewSeries = '';
     ANIME_PAGE_1.sort((x, y) => y.last_upd - x.last_upd);
-    let lastUpdAnime = ANIME_PAGE_1.splice(0, 4);
+    let lastUpdAnime = ANIME_PAGE_1.splice(0, 5);
     lastUpdAnime.forEach(({ name, series, cover, href }) => {
       htmlNewSeries += `
       <li class="aside__new-series-list-item">
