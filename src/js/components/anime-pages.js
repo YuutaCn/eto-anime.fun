@@ -3,7 +3,7 @@ class AnimePageUpd {
   render() {
     let realPage = window.location.pathname.slice(4, -5);
     console.log(realPage);
-    let pageArray = ANIME_PAGE_1.filter(el => el.id == realPage);
+    let pageArray = [...ANIME_PAGE_1].filter(el => el.id == realPage);
     console.log(pageArray)
     pageArray.forEach((e) => {
       document.querySelector('.anime-page__tittle-ru').innerHTML = e.name.ru;

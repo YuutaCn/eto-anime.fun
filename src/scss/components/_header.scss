@@ -37,7 +37,7 @@
   }
 
   &__form {
-    width: 343px;
+    width: calc(343px + 150px);
     height: 47px;
     border: solid 1px var(--grey-color);
     border-radius: 9px;
@@ -81,7 +81,8 @@
     }
 
     &-label {
-      width: 297px;
+      // width: 297px;
+      width: 450px;
       height: 100%;
       outline: none;
       border: none;
@@ -143,7 +144,8 @@
   }
 
   &__nav {
-    width: 704px;
+    // width: 704px;
+    width: 520px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -163,6 +165,10 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 24px;
+
+        &:nth-last-child(2) {
+          display: none;
+        }
 
         &-href {
           color: var(--black-color);

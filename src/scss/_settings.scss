@@ -34,6 +34,8 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  opacity: 0;
+  transition: opacity 250ms var(--page-cubic);
 }
 
 .is-hidden {
