@@ -5,7 +5,6 @@ class NewSeries {
     ANIME_PAGE_1.sort((x, y) => y.last_upd - x.last_upd);
     let lastUpdAnime = ANIME_PAGE_1.splice(0, 4);
     lastUpdAnime.forEach(({ name, series, cover, href }) => {
-      console.log(name.ru, series.last, cover, href)
       htmlNewSeries += `
       <li class="aside__new-series-list-item">
         <a class="aside__new-series-list-item-href" href="${href}">
