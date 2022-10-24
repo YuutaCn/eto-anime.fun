@@ -1,0 +1,145 @@
+.ongoing {
+  width: 100%;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tittle {
+    color: var(--black-color);
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+}
+
+.anime-swiper {
+  position: relative;
+  width: 1178px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 320px 320px 50px;
+  overflow: hidden;
+
+  &__ongoing {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &-slide {
+      max-width: 158px;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px !important;
+
+      &-href {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 7px;
+        color: var(--black-color);
+        font-family: 'Jura';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      &-prew {
+        width: 158px;
+        height: 245px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &-img {
+          border-radius: 9px;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+        }
+
+        &-score {
+          width: 34px;
+          height: 13px;
+          background: var(--green_input-color);
+          border-radius: 0px 4px 4px 0px;
+          position: absolute;
+          z-index: 1;
+          top: 10px;
+          left: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--white-color);
+          font-family: 'Jura';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 0px;
+        }
+
+        &-series {
+          position: absolute;
+          z-index: 1;
+          bottom: 17px;
+          right: 0;
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          border-radius: 4px 0px 0px 4px;
+          color: var(--white-color);
+          font-family: 'Jura';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 0px;
+          background: var(--primary-color);
+
+        }
+      }
+    }
+  }
+}
+
+.swiper-nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+
+  &-pagination {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    & .swiper-pagination-bullet {
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      border: solid 2px var(--grey-color);
+      background: transparent;
+
+      
+    }
+  }
+}
