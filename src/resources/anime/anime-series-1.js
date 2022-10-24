@@ -6,6 +6,7 @@ const ANIME_PAGE_1 = [
     "href":"../anime/1",
     "last_upd": "1666555417",
     "score": "7.4",
+    "frame":"//kodik.info/serial/16784/2a31afa59819cd5c19d30a6e95091693/720p",
     "name": {
       "ru": "Любимый во Франксе",
       "en": "Darling in the Franxx",
@@ -51,6 +52,7 @@ const ANIME_PAGE_1 = [
     "href":"../anime/2",
     "last_upd": "1666561843",
     "score": "7.8",
+    "frame":"//kodik.info/serial/22248/549119261c4d24acde5f6bbebd2dab41/720p",
     "name": {
       "ru": "Пластиковые воспоминания",
       "en": "Plastic memories",
@@ -91,6 +93,7 @@ const ANIME_PAGE_1 = [
     "href":"../anime/3",
     "last_upd": "1666562229",
     "score": "9.0",
+    "frame":"//kodik.info/serial/27242/e6b9e3103d2d4480d165725e135d8bb4/720p",
     "name": {
       "ru": "Ван-Пис",
       "en": "One-Piece",
@@ -140,6 +143,7 @@ const ANIME_PAGE_1 = [
     "href":"../anime/4",
     "last_upd": "1666562656",
     "score": "9.7",
+    "frame":"//kodik.info/serial/46020/f2539790e9d916fd26884c434bbeaa3c/720p",
     "name": {
       "ru": "Моб Психо 100 3",
       "en": "Mob Psycho 100 III",
@@ -191,6 +195,7 @@ const ANIME_PAGE_1 = [
     "href":"../anime/5",
     "last_upd": "1666562670",
     "score": "9.0",
+    "frame":"//kodik.info/serial/22917/a45d0f108c6f47b005c0142a35f1ae07/720p",
     "name": {
       "ru": "Тетрадь смерти",
       "en": "Death Note",
