@@ -19,13 +19,13 @@ class AnimePageUpd {
         document.querySelector('.anime-page__short-sheet-list-item-genre').innerHTML += `
         <li class="anime-page__short-sheet-list-item-genre-item"><a
         class="anime-page__short-sheet-list-item-genre-item-href link t-cap"
-        href="#no-scrolling">${genre.a}</a></li>
+        href="#no-scrolling">${genre}</a></li>
         `;
       });
       e.translate.forEach((translate) => {
         document.querySelector('.anime-page__short-sheet-list-item-translate').innerHTML += `
         <li class="anime-page__short-sheet-list-item-translate-item">
-          <a class="anime-page__short-sheet-list-item-translate-item-href link" href="#no-scrolling">${translate.a}</a>
+          <a class="anime-page__short-sheet-list-item-translate-item-href link" href="#no-scrolling">${translate}</a>
         </li>
         `;
       });
