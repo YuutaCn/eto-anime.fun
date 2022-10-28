@@ -2,7 +2,6 @@ class AnimePageUpd {
 
   render() {
     let realPage = window.location.pathname.slice(4, -5);
-    console.log(realPage);
     let pageArray = [...ANIME_PAGE_1].filter(el => el.id == realPage);
     console.log(pageArray)
     pageArray.forEach((e) => {
@@ -35,6 +34,7 @@ class AnimePageUpd {
       document.querySelector('.anime-page__desc-text').innerHTML = e.desc;
       document.querySelector('.player__video').src = e.frame;
       document.querySelector('.footer__chibi-img').src = e.chibi;
+      document.querySelector('.footer__chibi-img').alt = 'отправляйте чиби мне в tg: @yuutacn';
     })
   }
 }
