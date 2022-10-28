@@ -1,0 +1,28 @@
+@     IN      SOA   u1.hoster.by.   support.hoster.by. (
+	    2022101544		; Serial
+	    43200		; Refresh
+	    7200		; Retry
+	    604800		; Expiry
+	    600		; TTL
+)
+;;; A ;;;
+eto-anime.fun.    600    IN  A      185.199.108.153
+eto-anime.fun.    600    IN  A      185.199.109.153
+eto-anime.fun.    600    IN  A      185.199.110.153
+eto-anime.fun.    600    IN  A      185.199.111.153
+www.eto-anime.fun.    600    IN  A      185.199.108.153
+www.eto-anime.fun.    600    IN  A      185.199.109.153
+www.eto-anime.fun.    600    IN  A      185.199.110.153
+www.eto-anime.fun.    600    IN  A      185.199.111.153
+;;; AAAA ;;;
+eto-anime.fun.    600    IN  AAAA      2606:50c0:8000::153
+eto-anime.fun.    600    IN  AAAA      2606:50c0:8001::153
+eto-anime.fun.    600    IN  AAAA      2606:50c0:8002::153
+eto-anime.fun.    600    IN  AAAA      2606:50c0:8003::153
+www.eto-anime.fun.    600    IN  AAAA      2606:50c0:8000::153
+www.eto-anime.fun.    600    IN  AAAA      2606:50c0:8001::153
+www.eto-anime.fun.    600    IN  AAAA      2606:50c0:8002::153
+www.eto-anime.fun.    600    IN  AAAA      2606:50c0:8003::153
+;;; NS ;;;
+eto-anime.fun.    600    IN  NS      u1.hoster.by.
+eto-anime.fun.    600    IN  NS      u2.hoster.by.
