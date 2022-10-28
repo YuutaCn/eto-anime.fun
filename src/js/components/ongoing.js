@@ -32,11 +32,11 @@ class OngoingCard {
 
     function maxLenght(e) {
       if (String(e).length >= limit) {
-        return String(e).slice(0, limit).trim() + '...'
+        return String(e).slice(0, limit).trim() + '...';
       } else {
-        return String(e)
-      }
-    }
+        return String(e);
+      };
+    };
 
     let htmlOngoingCard = '';
     const ongoingArray = [...ANIME_PAGE_1].filter(el => el.status == `${count}`);
