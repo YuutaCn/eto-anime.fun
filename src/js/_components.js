@@ -15,3 +15,4 @@ if (document.querySelector('.ongoing')) {
   import('./components/ongoing')
 }
 
+import './components/search'

@@ -37,6 +37,7 @@
   }
 
   &__form {
+    position: relative;
     width: calc(343px + 150px);
     height: 47px;
     border: solid 1px var(--grey-color);
@@ -47,6 +48,53 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    &-search-zone {
+      width: calc(343px + 150px);
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      border: solid 1px var(--grey-color);
+      box-shadow: 4px 16px 14px 0px var(--black-color-20);
+      border-radius: 0px 0px 9px 9px;
+      padding: 9px 5px;
+      position: absolute;
+      top: calc(100% - 7px);
+      z-index: 999999;
+      background: var(--white-color);
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: height 250ms var(--default-cubic),
+      opacity 250ms var(--default-cubic),
+      visibility 250ms var(--default-cubic);
+
+      &.--active {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      & a {
+        padding: 10px 4px;
+        color: var(--black-color);
+        font-family: 'Jura';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 19px;
+        border-radius: 6px;
+        background: var(--white-color);
+        transition: color 250ms var(--default-cubic),
+        background 250ms var(--default-cubic);
+
+        &:hover {
+          color: var(--primary-color);
+          background: rgba(0, 0, 0, 0.05);
+        }
+
+      }
+    }
 
     &-btn {
       width: 20px;
