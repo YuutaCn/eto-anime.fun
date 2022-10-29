@@ -12,6 +12,6 @@ document.querySelectorAll('.transition').forEach(e => {
       }, 250);
     } else {
       event.preventDefault();
-    }
-  })
+    };
+  });
 });

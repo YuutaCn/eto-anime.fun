@@ -76,11 +76,21 @@ import { mobileCheck } from "./functions/mobile-check";
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+import { validateForms } from './functions/validate-forms';
+const rules1 = [
+  {
+    ruleSelector: '.header__form-label-input',
+    rules: [
+      {
+        rule: 'minLength',
+        value:1000000
+      }
+    ]
+  }
+];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
+const afterForm = () => {
+  return
+};
 
-// validateForms('.form-1', rules1, afterForm);
+validateForms('.header__form', rules1, afterForm);

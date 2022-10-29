@@ -35,9 +35,9 @@ class AnimePageUpd {
       document.querySelector('.player__video').src = e.frame;
       document.querySelector('.footer__chibi-img').src = e.chibi;
       document.querySelector('.footer__chibi-img').alt = 'отправляйте чиби мне в tg: @yuutacn';
-    })
-  }
-}
+    });
+  };
+};
 
-let animePageUpd = new AnimePageUpd()
-animePageUpd.render()
+let animePageUpd = new AnimePageUpd();
+animePageUpd.render();

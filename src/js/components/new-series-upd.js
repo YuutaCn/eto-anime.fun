@@ -21,8 +21,8 @@ class NewSeries {
       `;
     });
     document.querySelector('.aside__new-series-list').innerHTML = htmlNewSeries;
-  }
-}
+  };
+};
 
-let newSeries = new NewSeries()
-newSeries.render()
+let newSeries = new NewSeries();
+newSeries.render();

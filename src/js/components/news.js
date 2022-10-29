@@ -11,11 +11,7 @@ const NEWS = [
     "tittle": "Ищем тебя",
     "href": "#no-scrolling"
   },
-  {
-    "tittle": "Ищем качественный хентай с лолями",
-    "href": "#no-scrolling"
-  },
-]
+];
 
 class NewsCard {
   render() {
@@ -31,7 +27,7 @@ class NewsCard {
       `;
     });
     document.querySelector('.aside__news-list').innerHTML = htmlNews;
-  }
-}
-let card = new NewsCard()
-card.render()
+  };
+};
+let card = new NewsCard();
+card.render();

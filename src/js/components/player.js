@@ -1,4 +1,4 @@
-let lightStatus = false
+let lightStatus = false;
 function lightMod() {
   if (lightStatus) {
     document.querySelector('.player-light').classList.remove('active');
@@ -10,8 +10,8 @@ function lightMod() {
     document.querySelector('.player__header-btn-light').innerHTML = 'Включить свет';
     document.querySelector('.player').classList.add('active-light');
     lightStatus = true;
-  }
-}
+  };
+};
 
 document.querySelector('.player__header-btn-light').addEventListener('click', () => {
   lightMod()
