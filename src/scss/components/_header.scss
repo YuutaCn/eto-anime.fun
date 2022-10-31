@@ -193,7 +193,8 @@
 
   &__nav {
     // width: 704px;
-    width: 520px;
+    // width: 520px;
+    width: 330px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -229,6 +230,8 @@
 
           &.active {
             color: var(--secondary-color);
+            pointer-events: none;
+            cursor: no-drop;
           }
 
           &:hover {
