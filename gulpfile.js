@@ -51,6 +51,8 @@ const paths = {
   resourcesFolder: `${srcFolder}/resources`,
   animeFolder: `${srcFolder}/ap`,
   animeFolderBuild: `${buildFolder}/ap`,
+  pagesFolder: `${srcFolder}/pages`,
+  pagesFolderBuild: `${buildFolder}/pages`,
 };
 
 let isProd = false; // dev by default
@@ -263,10 +265,17 @@ const htmlIncludeAp = () => {
       prefix: '@',
       basepath: '@file'
     }))
-    // .pipe(typograf({
-    //   locale: ['ru', 'en-US']
-    // }))
     .pipe(dest(paths.animeFolderBuild))
+    .pipe(browserSync.stream());
+}
+
+const htmlIncludePages = () => {
+  return src([`${paths.pagesFolder}/*.html`])
+    .pipe(fileInclude({
+      prefix: '@',
+      basepath: '@file'
+    }))
+    .pipe(dest(paths.pagesFolderBuild))
     .pipe(browserSync.stream());
 }
 
@@ -282,6 +291,7 @@ const watchFiles = () => {
   watch(`${paths.srcPartialsFolder}/**/**.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.animeFolder}**/**.html`, htmlIncludeAp);
+  watch(`${paths.pagesFolder}**/**.html`, htmlIncludePages);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
@@ -340,11 +350,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, htmlIncludeAp, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, htmlIncludeAp, htmlIncludePages, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
 
-exports.backend = series(clean, htmlInclude, htmlIncludeAp, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
+exports.backend = series(clean, htmlInclude, htmlIncludeAp, htmlIncludePages, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, htmlIncludeAp, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, htmlIncludeAp, htmlIncludePages, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 
