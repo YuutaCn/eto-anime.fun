@@ -14,6 +14,11 @@
       font-size: 24px;
       margin-bottom: 13px;
     }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
   }
 
   &__list {
@@ -22,6 +27,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
+
+    @include small-tablet {
+      justify-content: space-evenly;
+    }
 
     &-item {
       position: relative;
@@ -44,6 +53,11 @@
 
       @include tablet {
         width: 357px;
+      }
+
+      @include small-tablet {
+        width: 230px;
+        height: 100px;
       }
 
       &:hover {
@@ -83,6 +97,10 @@
           font-size: 15px;
         }
 
+        @include small-tablet {
+          font-size: 12px;
+        }
+
         & .link-clikcable {
           width: 100%;
           height: 100%;
@@ -108,7 +126,9 @@
         border-bottom-left-radius: 6px;
         border-top-left-radius: 6px;
 
-
+        @include small-tablet {
+          font-size: 11px;
+        }
       }
 
       &-shadow {

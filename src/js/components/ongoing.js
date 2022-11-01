@@ -62,6 +62,22 @@ const swiper = new Swiper('.anime-swiper', {
         rows: 2,
       },
     },
+    768: {
+      pagination: {
+        el: '.swiper-nav-pagination',
+        clickable: true,
+        type: 'bullets',
+        dynamicBullets: true,
+        dynamicMainBullets: 13,
+      },
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+      spaceBetween: 40,
+      grid: {
+        fill: 'row',
+        rows: 1,
+      },
+    },
   },
 });
 
