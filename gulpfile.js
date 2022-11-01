@@ -270,7 +270,7 @@ const htmlIncludeAp = () => {
 }
 
 const htmlIncludePages = () => {
-  return src([`${paths.pagesFolder}/*.html`])
+  return src([`${paths.pagesFolder}/**/**.html`])
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file'
