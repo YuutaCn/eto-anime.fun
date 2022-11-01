@@ -21,6 +21,11 @@
     --container-offset: 15px;
   }
 
+  @media (max-width: (767px)) {
+    --content-width: 500px;
+    --container-offset: 10px;
+  }
+
   // colors
   --primary-color: #A65CF0;
   --primary_light-color: #C998FB;

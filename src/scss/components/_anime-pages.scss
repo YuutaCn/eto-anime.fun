@@ -23,7 +23,11 @@ h1 {
 
       @include small-tablet {
         font-size: 24px;
-        line-height: 10px;
+        line-height: 18px;
+      }
+
+      @include mobile {
+        text-align: center;
       }
     }
 
@@ -37,6 +41,10 @@ h1 {
 
       @include small-tablet {
         font-size: 18px;
+      }
+
+      @include mobile {
+        text-align: center;
       }
     }
   }
@@ -53,6 +61,11 @@ h1 {
       gap: 15px;
     }
 
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
     &-cover {
       display: flex;
       width: 100%;
@@ -65,7 +78,7 @@ h1 {
       overflow: hidden;
 
       @include small-tablet {
-        height: 300px;
+        height: 270px;
       }
     }
 
@@ -93,6 +106,10 @@ h1 {
             grid-template-columns: 100px 1fr;
             padding: 4px 0px;
             min-height: 30px;
+          }
+
+          @include mobile {
+            padding: 6px 0px;
           }
 
           & .anime-sheet-text {
@@ -228,6 +245,10 @@ h1 {
       @include small-tablet {
         font-size: 18px;
       }
+
+      @include mobile {
+        text-align: center;
+      }
     }
 
     &-text {
@@ -262,5 +283,9 @@ h1 {
   @include small-tablet {
     font-size: 22px;
     line-height: 18px;
+  }
+
+  @include mobile {
+    text-align: center;
   }
 }

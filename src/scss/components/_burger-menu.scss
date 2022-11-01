@@ -29,7 +29,7 @@
     will-change: width;
 
     &.menu--active {
-      width: 300px;
+      width: 210px;
     }
 
     &::after {
@@ -53,7 +53,7 @@
     &-list {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 10px;
 
       &-item {
 
@@ -61,9 +61,9 @@
           color: var(--black-color);
           font-family: 'Jura';
           font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 16px;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 18px;
         }
       }
     }
