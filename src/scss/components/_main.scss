@@ -2,6 +2,10 @@
   width: 100%;
   background: var(--white-color);
 
+  @include mobile {
+    max-width: 100vw;
+  }
+
   &__container {
     padding-top: 15px;
     width: 100%;
@@ -13,6 +17,10 @@
 
     @include tablet {
       gap: 30px;
+    }
+
+    @include small-tablet {
+      gap: 0px;
     }
   }
 }

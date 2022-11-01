@@ -48,6 +48,10 @@
     height: 420px;
   }
 
+  @include mobile {
+    height: 250px;
+  }
+
   &.active-light {
     box-shadow: 15px 15px 70px rgba($color: #000000, $alpha: .6);
 
@@ -241,6 +245,10 @@
 
         @include tablet {
           font-size: 14px;
+        }
+
+        @include mobile {
+          display: none;
         }
 
         &:hover {

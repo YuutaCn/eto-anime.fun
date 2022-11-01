@@ -51,8 +51,12 @@
     }
 
     &.burger--active {
-      transform: translateX(240px);
+      transform: translateX(160px);
       transition: transform 250ms var(--default-cubic) 50ms;
+
+      @include mobile {
+        transform: translateX(165px);
+      }
       & .header__burger-line {
         &:nth-child(1) {
           transform: translate3d(6px, 6px, 0);
@@ -180,6 +184,10 @@
       @include small-tablet {
         width: 350px;
         font-size: 12px;
+      }
+
+      @include small-tablet {
+        width: 90vw;
       }
 
       &.--active {

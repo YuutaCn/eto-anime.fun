@@ -59,60 +59,60 @@ let burgeMenuStatus = false;
     });
   });
 
-  window.addEventListener('touchstart', function(e){
-    if (document.querySelector('.anime-swiper').contains(e.target)){
+  // window.addEventListener('touchstart', function(e){
+  //   if (document.querySelector('.anime-swiper').contains(e.target)){
 
-    } else{
-      document.addEventListener('touchstart', handleTouchStart, false);
-      document.addEventListener('touchmove', handleTouchMove, false);
-      var xDown = null;
-      var yDown = null;
-      function getTouches(evt) {
-        return evt.touches ||             // browser API
-          evt.originalEvent.touches; // jQuery
-      }
-      function handleTouchStart(evt) {
-        const firstTouch = getTouches(evt)[0];
-        xDown = firstTouch.clientX;
-        yDown = firstTouch.clientY;
-      };
-      function handleTouchMove(evt) {
-        if (!xDown || !yDown) {
-          return;
-        }
-        var xUp = evt.touches[0].clientX;
-        var yUp = evt.touches[0].clientY;
-        var xDiff = xDown - xUp;
-        var yDiff = yDown - yUp;
-        if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-          if (xDiff > 0) {
-            /* right swipe */
-            if (burgeMenuStatus === true) {
-              closeMenu()
-            }
-          } else {
-            /* left swipe */
-            if (burgeMenuStatus === false) {
-              openMenu()
-            }
-          }
-        } else {
-          if (yDiff > 0) {
-            /* down swipe */
-            if (burgeMenuStatus === true) {
-              closeMenu()
-            }
-          } else {
-            /* up swipe */
-            if (burgeMenuStatus === true) {
-              closeMenu()
-            }
-          }
-        }
-        /* reset values */
-        xDown = null;
-        yDown = null;
-      };
-    }
-  });
+  //   } else{
+  //     document.addEventListener('touchstart', handleTouchStart, false);
+  //     document.addEventListener('touchmove', handleTouchMove, false);
+  //     var xDown = null;
+  //     var yDown = null;
+  //     function getTouches(evt) {
+  //       return evt.touches ||             // browser API
+  //         evt.originalEvent.touches; // jQuery
+  //     }
+  //     function handleTouchStart(evt) {
+  //       const firstTouch = getTouches(evt)[0];
+  //       xDown = firstTouch.clientX;
+  //       yDown = firstTouch.clientY;
+  //     };
+  //     function handleTouchMove(evt) {
+  //       if (!xDown || !yDown) {
+  //         return;
+  //       }
+  //       var xUp = evt.touches[0].clientX;
+  //       var yUp = evt.touches[0].clientY;
+  //       var xDiff = xDown - xUp;
+  //       var yDiff = yDown - yUp;
+  //       if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+  //         if (xDiff > 0) {
+  //           /* right swipe */
+  //           if (burgeMenuStatus === true) {
+  //             closeMenu()
+  //           }
+  //         } else {
+  //           /* left swipe */
+  //           if (burgeMenuStatus === false) {
+  //             openMenu()
+  //           }
+  //         }
+  //       } else {
+  //         if (yDiff > 0) {
+  //           /* down swipe */
+  //           if (burgeMenuStatus === true) {
+  //             closeMenu()
+  //           }
+  //         } else {
+  //           /* up swipe */
+  //           if (burgeMenuStatus === true) {
+  //             closeMenu()
+  //           }
+  //         }
+  //       }
+  //       /* reset values */
+  //       xDown = null;
+  //       yDown = null;
+  //     };
+  //   }
+  // });
 })();
