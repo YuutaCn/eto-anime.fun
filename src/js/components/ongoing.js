@@ -8,7 +8,7 @@ const swiper = new Swiper('.anime-swiper', {
     dynamicBullets: true,
     dynamicMainBullets: 13,
   },
-  navigation:{
+  navigation: {
     nextEl: '.swiper-nav-next',
     prevEl: '.swiper-nav-prev',
   },
@@ -20,12 +20,15 @@ const swiper = new Swiper('.anime-swiper', {
     fill: 'row',
     rows: 2,
   },
-  simulateTouch: true
+  simulateTouch: true,
+  on: {
+    slideChange: function() {
+      document.querySelector('.swiper-pages-pos').innerHTML = `${Math.round(swiper.realIndex/6)+1} из ${Math.round(swiper.slides.length/(6*2))}`;
+    },
+  },
 });
 
-
 class OngoingCard {
-
 
   render(count = 'Онгоинг') {
     const limit = 25;
