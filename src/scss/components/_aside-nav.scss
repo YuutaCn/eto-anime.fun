@@ -2,6 +2,14 @@
   position: relative;
   width: 213px;
 
+  @include small-tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -48,6 +56,10 @@
       gap: 10px;
       cursor: pointer;
 
+      @include small-tablet {
+        height: 28px;
+      }
+
       &-rect {
         height: 100%;
         width: 6px;
@@ -71,6 +83,10 @@
           font-size: 15px;
         }
 
+        @include small-tablet {
+          font-size: 14px;
+        }
+
         &:focus {
           outline: solid 2px var(--secondary_light-color);
         }
@@ -78,7 +94,7 @@
     }
 
     &-dropdown {
-      width: 666px;
+      width: 500px;
       position: absolute;
       z-index: 5;
       left: 100%;
@@ -100,6 +116,11 @@
         row-gap: 13px;
         column-gap: 28px;
         flex-wrap: wrap;
+
+        @include small-tablet {
+          row-gap: 5px;
+          column-gap: 0px;
+        }
 
         &-item {
 
@@ -123,6 +144,11 @@
               background 150ms var(--default-cubic),
               outline 250ms var(--default-cubic),
               outline-offset 250ms var(--default-cubic);
+
+              @include small-tablet {
+                font-size: 14px;
+                height: 16px;
+              }
 
             &:hover {
               color: var(--secondary-color);
@@ -183,6 +209,11 @@
 
       @include tablet {
         font-size: 15px;
+      }
+
+      @include small-tablet {
+        font-size: 14px;
+        min-height: 28px;
       }
 
       &:hover {

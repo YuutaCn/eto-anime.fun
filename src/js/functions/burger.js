@@ -6,12 +6,14 @@ let burgeMenuStatus = false;
 (function () {
   const burger = document?.querySelector('[data-burger]');
   const menu = document?.querySelector('[data-menu]');
+  const menuOverlay = document?.querySelector('[data-menu-overlay]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
 
   function openMenu() {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+    menuOverlay?.classList.toggle('menu-overlay--active');
     burgeMenuStatus = true;
 
     if (menu?.classList.contains('menu--active')) {
@@ -32,6 +34,7 @@ let burgeMenuStatus = false;
     burger?.setAttribute('aria-label', 'Открыть меню');
     burger.classList.remove('burger--active');
     menu.classList.remove('menu--active');
+    menuOverlay?.classList.remove('menu-overlay--active');
     // enableScroll();
     burgeMenuStatus = false;
   }
@@ -50,59 +53,66 @@ let burgeMenuStatus = false;
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
+      menuOverlay?.classList.remove('menu-overlay--active');
       // enableScroll();
       burgeMenuStatus = false;
     });
   });
 
-  document.addEventListener('touchstart', handleTouchStart, false);
-  document.addEventListener('touchmove', handleTouchMove, false);
-  var xDown = null;
-  var yDown = null;
-  function getTouches(evt) {
-    return evt.touches ||             // browser API
-      evt.originalEvent.touches; // jQuery
-  }
-  function handleTouchStart(evt) {
-    const firstTouch = getTouches(evt)[0];
-    xDown = firstTouch.clientX;
-    yDown = firstTouch.clientY;
-  };
-  function handleTouchMove(evt) {
-    if (!xDown || !yDown) {
-      return;
-    }
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-    if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-      if (xDiff > 0) {
-        /* right swipe */
-        if (burgeMenuStatus === true) {
-          closeMenu()
-        }
-      } else {
-        /* left swipe */
-        if (burgeMenuStatus === false) {
-          openMenu()
-        }
+  window.addEventListener('touchstart', function(e){
+    if (document.querySelector('.anime-swiper').contains(e.target)){
+
+    } else{
+      document.addEventListener('touchstart', handleTouchStart, false);
+      document.addEventListener('touchmove', handleTouchMove, false);
+      var xDown = null;
+      var yDown = null;
+      function getTouches(evt) {
+        return evt.touches ||             // browser API
+          evt.originalEvent.touches; // jQuery
       }
-    } else {
-      if (yDiff > 0) {
-        /* down swipe */
-        if (burgeMenuStatus === true) {
-          closeMenu()
+      function handleTouchStart(evt) {
+        const firstTouch = getTouches(evt)[0];
+        xDown = firstTouch.clientX;
+        yDown = firstTouch.clientY;
+      };
+      function handleTouchMove(evt) {
+        if (!xDown || !yDown) {
+          return;
         }
-      } else {
-        /* up swipe */
-        if (burgeMenuStatus === true) {
-          closeMenu()
+        var xUp = evt.touches[0].clientX;
+        var yUp = evt.touches[0].clientY;
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+          if (xDiff > 0) {
+            /* right swipe */
+            if (burgeMenuStatus === true) {
+              closeMenu()
+            }
+          } else {
+            /* left swipe */
+            if (burgeMenuStatus === false) {
+              openMenu()
+            }
+          }
+        } else {
+          if (yDiff > 0) {
+            /* down swipe */
+            if (burgeMenuStatus === true) {
+              closeMenu()
+            }
+          } else {
+            /* up swipe */
+            if (burgeMenuStatus === true) {
+              closeMenu()
+            }
+          }
         }
-      }
+        /* reset values */
+        xDown = null;
+        yDown = null;
+      };
     }
-    /* reset values */
-    xDown = null;
-    yDown = null;
-  };
+  });
 })();

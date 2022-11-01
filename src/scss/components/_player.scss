@@ -44,6 +44,10 @@
     height: 480px;
   }
 
+  @include small-tablet {
+    height: 420px;
+  }
+
   &.active-light {
     box-shadow: 15px 15px 70px rgba($color: #000000, $alpha: .6);
 

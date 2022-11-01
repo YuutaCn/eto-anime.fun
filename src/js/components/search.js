@@ -25,3 +25,45 @@ document.querySelector('.header__form-label-input').addEventListener('input', e 
     };
   };
 });
+
+window.addEventListener('click', function(e){
+  if (document.querySelector('.header__form').contains(e.target)){
+    // Clicked in box
+  } else{
+    searchZone.classList.remove('--active');
+  }
+});
+
+if (window.innerWidth < 1024 && window.innerWidth > 767) {
+  let searchStatus = false;
+  document.querySelector('.header__form-btn').disabled = false;
+  document.querySelector('.header__form-btn').addEventListener('click', () => {
+    if (searchStatus == false) {
+      document.querySelector('.header__form').style.width = '350px';
+      document.querySelector('.header__form').style.gap = '10px';
+      document.querySelector('.header__form').style.padding = '5px';
+      document.querySelector('.header__form-label').style.width = '450px';
+      searchStatus = true;
+    } else {
+      document.querySelector('.header__form').style.width = '';
+      document.querySelector('.header__form').style.gap = '';
+      document.querySelector('.header__form').style.padding = '';
+      document.querySelector('.header__form-label').style.width = '';
+      searchZone.classList.remove('--active');
+      searchStatus = false;
+    };
+  });
+  window.addEventListener('click', function(e){
+    if (document.querySelector('.header__form').contains(e.target)){
+      // Clicked in box
+    } else{
+      document.querySelector('.header__form').style.width = '';
+      document.querySelector('.header__form').style.gap = '';
+      document.querySelector('.header__form').style.padding = '';
+      document.querySelector('.header__form-label').style.width = '';
+      searchZone.classList.remove('--active');
+      searchStatus = false;
+    }
+  });
+};
+

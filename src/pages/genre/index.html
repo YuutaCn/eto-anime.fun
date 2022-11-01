@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('../../partials/head.html',{
+'title':'ETO ANIME? | ЖАНРЫ'
+})
+<body class="page__body">
+  <div class="site-container">
+    @include('../../partials/anime/header-anime.html')
+    <main class="main">
+      <div class="main__container container">
+        @include('../../partials/aside-nav.html')
+        <div class="main__content">
+          <h1 class="main__content_h1">Искать аниме по жанрам на сайте ETO ANIME?</h1>
+          <section class="select-anime">
+            <picture>
+              <img loading="lazy" src="https://thumbs.gfycat.com/SolidAliveGreyhounddog-size_restricted.gif" class="image select-anime__gif" width="768" height="768" alt="упс гифка">
+            </picture>
+          </section>
+        </div>
+      </div>
+    </main>
+    @include('../../partials/footer.html')
+  </div>
+</body>
+</html>
