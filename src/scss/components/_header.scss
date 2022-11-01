@@ -204,7 +204,6 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
 
       &-item {
         color: var(--black-color);
@@ -213,6 +212,8 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 24px;
+        align-items: center;
+        display: flex;
 
         &-href {
           color: var(--black-color);

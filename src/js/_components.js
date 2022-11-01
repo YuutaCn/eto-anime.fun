@@ -5,7 +5,10 @@ if (document.querySelector('.header')) {
   import('./components/new-series-upd');
   import('./components/search');
   import('./components/page-checker');
-}
+  document.querySelector('.header__nav-list-item-btn').addEventListener('click', () => {
+    alert('Приносим свои глубочайшие извинения «Мяу», но логин временно не работает «Мяу».')
+  });
+};
 
 if (document.querySelector('.player')) {
   import('./components/player');
