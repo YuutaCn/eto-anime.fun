@@ -193,8 +193,7 @@
 
   &__nav {
     // width: 704px;
-    // width: 520px;
-    width: 330px;
+    width: 520px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -214,10 +213,6 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 24px;
-
-        &:nth-last-child(2) {
-          display: none;
-        }
 
         &-href {
           color: var(--black-color);
