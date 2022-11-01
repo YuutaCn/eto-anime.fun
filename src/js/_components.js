@@ -20,3 +20,11 @@ if (document.querySelector('.ongoing')) {
 if (document.querySelector('.top-anime')) {
   import('./components/top-anime')
 }
+
+if (document.querySelector('.years-anime')) {
+  import('./components/years-anime')
+}
+
+if (document.querySelector('.select-anime')) {
+  import('./components/select-anime')
+}

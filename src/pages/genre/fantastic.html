@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('../../partials/head.html',{
+'title':'ETO ANIME?'
+})
+<body class="page__body">
+  <div class="site-container">
+    @include('../../partials/anime/header-anime.html')
+    <main class="main">
+      <div class="main__container container">
+        @include('../../partials/aside-nav.html')
+        <div class="main__content">
+          <h1 class="main__content_h1">Фантастика Смотреть аниме на сайте это аниме без рекламы и регистрации</h1>
+          <section class="select-anime">
+            <h2 class="select-anime__tittle">Аниме жанра «Фантастика» на сайте ETO ANIME?</h2>
+            <ul class="select-anime__list list-reset"></ul>
+          </section>
+        </div>
+      </div>
+    </main>
+    @include('../../partials/footer.html')
+  </div>
+</body>
+</html>
