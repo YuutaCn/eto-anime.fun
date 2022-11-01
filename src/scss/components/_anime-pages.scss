@@ -78,8 +78,13 @@ h1 {
             font-style: normal;
             font-weight: 400;
             font-size: 22px;
-            line-height: 26px;
+            line-height: 16px;
             transition: color 250ms var(--default-cubic);
+
+            @include big-desktop {
+              font-size: 18px;
+              line-height: 9px;
+            }
           }
 
           &-translate,
@@ -118,6 +123,10 @@ h1 {
             font-weight: 700;
             font-size: 22px;
             line-height: 26px;
+
+            @include big-desktop {
+              font-size: 18px;
+            }
           }
 
           & .li-link {
@@ -175,6 +184,10 @@ h1 {
       font-weight: 700;
       font-size: 24px;
       line-height: 28px;
+
+      @include tablet {
+        font-size: 22px;
+      }
     }
 
     &-text {
@@ -196,4 +209,9 @@ h1 {
   font-size: 32px;
   line-height: 38px;
   margin-bottom: 10px;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 20px;
+  }
 }

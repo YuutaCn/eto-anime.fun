@@ -19,6 +19,7 @@ class TopCard {
         <span class="top-anime__list-item-position-text">${animePosition}</span>
         </div>
         <h3 class="top-anime__list-item-tittle">${name.ru}</h3>
+        <div class="link-clikcable"></div>
         </a>
         <span class="top-anime__list-item-score">${score}</span>
         </li>

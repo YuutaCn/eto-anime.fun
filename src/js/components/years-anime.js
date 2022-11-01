@@ -22,6 +22,7 @@ class YearCard {
         <span class="years-anime__list-item-position-text">${animePosition}</span>
         </div>
         <h3 class="years-anime__list-item-tittle">${name.ru}</h3>
+        <div class="link-clikcable"></div>
         </a>
         <span class="years-anime__list-item-score">${score}</span>
         </li>

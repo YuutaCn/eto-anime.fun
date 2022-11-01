@@ -17,7 +17,7 @@ document.querySelector('.header__form-label-input').addEventListener('input', e 
       } else {
         searchArray.forEach(el => {
           searchHtml += `
-        <a href="${el.href}">${el.name.ru}</a>
+        <a href="/${el.href}">${el.name.ru}</a>
         `;
           searchZone.innerHTML = searchHtml;
         });

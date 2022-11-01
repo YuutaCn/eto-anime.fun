@@ -1,29 +1,66 @@
 import Swiper, { Grid, Navigation, Pagination } from 'swiper';
 Swiper.use([Pagination, Grid, Navigation]);
 const swiper = new Swiper('.anime-swiper', {
-  pagination: {
-    el: '.swiper-nav-pagination',
-    clickable: true,
-    type: 'bullets',
-    dynamicBullets: true,
-    dynamicMainBullets: 13,
-  },
   navigation: {
     nextEl: '.swiper-nav-next',
     prevEl: '.swiper-nav-prev',
   },
-  slidesPerView: 6,
-  slidesPerGroup: 6,
-  spaceBetween: 46,
   speed: 800,
-  grid: {
-    fill: 'row',
-    rows: 2,
-  },
   simulateTouch: true,
-  on: {
-    slideChange: function() {
-      document.querySelector('.swiper-pages-pos').innerHTML = `${Math.round(swiper.realIndex/6)+1} из ${Math.round(swiper.slides.length/(6*2))}`;
+  // on: {
+  //   slideChange: function () {
+  //     document.querySelector('.swiper-pages-pos').innerHTML = `${Math.round(swiper.realIndex / 6) + 1} из ${Math.round(swiper.slides.length / (6 * 2))}`;
+  //   },
+  // },
+
+  breakpoints: {
+    1920: {
+      pagination: {
+        el: '.swiper-nav-pagination',
+        clickable: true,
+        type: 'bullets',
+        dynamicBullets: true,
+        dynamicMainBullets: 13,
+      },
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+      spaceBetween: 46,
+      grid: {
+        fill: 'row',
+        rows: 2,
+      },
+    },
+    1440: {
+      pagination: {
+        el: '.swiper-nav-pagination',
+        clickable: true,
+        type: 'bullets',
+        dynamicBullets: true,
+        dynamicMainBullets: 11,
+      },
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+      spaceBetween: 46,
+      grid: {
+        fill: 'row',
+        rows: 2,
+      },
+    },
+    1024: {
+      pagination: {
+        el: '.swiper-nav-pagination',
+        clickable: true,
+        type: 'bullets',
+        dynamicBullets: true,
+        dynamicMainBullets: 9,
+      },
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 40,
+      grid: {
+        fill: 'row',
+        rows: 2,
+      },
     },
   },
 });
