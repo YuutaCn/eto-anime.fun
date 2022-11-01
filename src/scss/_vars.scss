@@ -6,6 +6,16 @@
   --container-offset: 240px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
+  @media (max-width: (1919px)) {
+    --content-width: 1240px;
+    --container-offset: 100px;
+  }
+
+  @media (max-width: (1439px)) {
+    --content-width: 994px;
+    --container-offset: 15px;
+  }
+
   // colors
   --primary-color: #A65CF0;
   --primary_light-color: #C998FB;

@@ -15,6 +15,11 @@
     font-size: 27px;
     line-height: 32px;
     margin-bottom: 15px;
+
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 13px;
+    }
   }
 }
 
@@ -23,6 +28,14 @@
   width: 1178px;
   height: 100%;
   overflow: hidden;
+
+  @include big-desktop {
+    width: 980px;
+  }
+
+  @include tablet {
+    width: 751px;
+  }
 
   &__ongoing {
     width: 100%;
@@ -130,6 +143,11 @@
   margin-top: 20px;
   overflow: hidden;
 
+  @include tablet {
+    padding: 0;
+    margin-top: 0;
+  }
+
   &-prev,
   &-next {
     position: relative;
@@ -143,6 +161,11 @@
     height: 45px;
     cursor: pointer;
     transition: transform 250ms var(--default-cubic);
+
+    @include tablet {
+      width: 35px;
+      height: 35px;
+    }
 
     &:hover {
       transform: scale(1.15);
@@ -197,6 +220,16 @@
     align-items: center;
     gap: 10px;
 
+    @include big-desktop {
+      width: 770px !important;
+      justify-content: start;
+    }
+
+    @include tablet {
+      width: 640px !important;
+      justify-content: start;
+    }
+
     & .swiper-pagination-bullet {
       min-width: 35px;
       max-width: 35px;
@@ -207,6 +240,13 @@
       background: #00000000;
       opacity: 0.5;
       transition: all 250ms var(--default-cubic);
+
+      @include tablet {
+        min-width: 28px;
+        max-width: 28px;
+        min-height: 28px;
+        max-height: 28px;
+      }
 
       &:hover {
         transform: scale(.9);

@@ -10,5 +10,9 @@
     flex-direction: row;
     gap: 47px;
     overflow: hidden;
+
+    @include tablet {
+      gap: 30px;
+    }
   }
 }
