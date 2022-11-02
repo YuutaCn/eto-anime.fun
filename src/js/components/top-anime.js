@@ -23,8 +23,8 @@ class TopCard {
         </a>
         <span class="top-anime__list-item-score">${score}</span>
         </li>
-        `
-        animePosition++
+        `;
+        animePosition++;
       });
     document.querySelector('.top-anime__list').innerHTML = htmlTopCard;
   };

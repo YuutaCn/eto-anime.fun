@@ -6,22 +6,22 @@
   --container-offset: 240px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  @media (max-width: (1919px)) {
+  @media (min-width: (1440px)) and (max-width: (1919px)) {
     --content-width: 1240px;
     --container-offset: 100px;
   }
 
-  @media (max-width: (1439px)) {
+  @media (min-width: (1024px)) and (max-width: (1439px)) {
     --content-width: 994px;
     --container-offset: 15px;
   }
 
-  @media (max-width: (1023px)) {
+  @media (min-width: (768px)) and (max-width: (1023px)) {
     --content-width: 900px;
     --container-offset: 15px;
   }
 
-  @media (max-width: (767px)) {
+  @media (min-width: (320px)) and (max-width: (767px)) {
     --content-width: 500px;
     --container-offset: 10px;
   }
