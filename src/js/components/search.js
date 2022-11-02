@@ -110,7 +110,7 @@ if (window.innerWidth < 768 && window.innerWidth > 0) {
       document.querySelector('.header__logo').style.visibility = '';
       searchZone.classList.remove('--active');
       searchStatus = false;
-    }
+    };
   });
 };
 

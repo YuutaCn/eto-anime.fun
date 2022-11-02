@@ -57,15 +57,18 @@
       @include mobile {
         transform: translateX(165px);
       }
+
       & .header__burger-line {
         &:nth-child(1) {
           transform: translate3d(6px, 6px, 0);
           rotate: 45deg;
         }
+
         &:nth-child(2) {
           opacity: 0;
           visibility: hidden;
         }
+
         &:nth-child(3) {
           transform: translate3d(7px, -7px, 0);
           rotate: -45deg;
@@ -168,8 +171,8 @@
       opacity: 0;
       visibility: hidden;
       transition: height 250ms var(--default-cubic),
-      opacity 250ms var(--default-cubic),
-      visibility 250ms var(--default-cubic);
+        opacity 250ms var(--default-cubic),
+        visibility 250ms var(--default-cubic);
 
       @include big-desktop {
         width: 430px;
@@ -207,7 +210,7 @@
         border-radius: 6px;
         background: var(--white-color);
         transition: color 250ms var(--default-cubic),
-        background 250ms var(--default-cubic);
+          background 250ms var(--default-cubic);
 
         @include tablet {
           font-size: 16px;
@@ -327,9 +330,9 @@
             opacity 250ms var(--default-cubic),
             visibility 250ms var(--default-cubic);
 
-            @include tablet {
-              font-size: 15px;
-            }
+          @include tablet {
+            font-size: 15px;
+          }
         }
       }
     }

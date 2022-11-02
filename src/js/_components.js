@@ -48,7 +48,6 @@ if (document.querySelector('.select-anime')) {
 
 if (document.querySelector('.random__213211197214')) {
   import('./components/randop')
-}
-
+};
 
 import './components/cross-page';

@@ -26,8 +26,8 @@ class YearCard {
         </a>
         <span class="years-anime__list-item-score">${score}</span>
         </li>
-        `
-        animePosition++
+        `;
+        animePosition++;
       });
     document.querySelector('.years-anime__list').innerHTML = htmlTopCard;
   };
