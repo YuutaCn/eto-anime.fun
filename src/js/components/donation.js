@@ -1,6 +1,5 @@
 let rimaStatus = false;
 
-document.addEventListener('DOMContentLoaded', () => {
   const rimaSection = document.querySelector('.rima');
   const rimaOne = document.querySelector('.rima__one');
   const rimaTwo = document.querySelector('.rima__two');
@@ -21,4 +20,3 @@ document.addEventListener('DOMContentLoaded', () => {
     rimaTwo.classList.remove('active');
     rimaStatus = false;
   });
-});

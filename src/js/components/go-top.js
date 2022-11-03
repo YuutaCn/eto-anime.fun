@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
   function trackScroll() {
     var scrolled = window.pageYOffset;
     var coords = document.documentElement.clientHeight;
@@ -22,4 +21,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', trackScroll);
   goTopBtn.addEventListener('click', backToTop);
-});
