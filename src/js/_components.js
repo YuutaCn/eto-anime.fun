@@ -1,4 +1,3 @@
-
 if (document.querySelector('.header')) {
   import('./components/news.js');
   import('./components/aside-nav');
@@ -51,5 +50,7 @@ if (document.querySelector('.random__213211197214')) {
 };
 
 import './components/cross-page';
-import './components/donation';
-import './components/go-top';
+if (document.querySelector('.site-container')) {
+  import('./components/donation');
+  import('./components/go-top');
+}
