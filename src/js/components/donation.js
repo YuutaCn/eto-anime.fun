@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       rimaOne.classList.add('active');
     }, 3000);
-  }
+  };
   rimaRender();
   rimaSection.addEventListener('mouseover', () => {
     rimaOne.classList.remove('active');
