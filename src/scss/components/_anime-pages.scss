@@ -118,17 +118,17 @@ h1 {
             font-style: normal;
             font-weight: 400;
             font-size: 22px;
-            line-height: 16px;
+            line-height: 24px;
             transition: color 250ms var(--default-cubic);
 
             @include big-desktop {
               font-size: 18px;
-              line-height: 9px;
+              line-height: 20px;
             }
 
             @include small-tablet {
               font-size: 14px;
-              line-height: 7px;
+              line-height: 16px;
             }
           }
 
@@ -181,7 +181,8 @@ h1 {
           & .li-link {
             display: flex;
             flex-direction: row;
-            gap: 13px;
+            gap: 14px;
+            row-gap: 3px;
 
             & li {
               position: relative;
