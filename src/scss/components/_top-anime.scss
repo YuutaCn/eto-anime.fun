@@ -71,19 +71,21 @@
       }
 
       &:hover {
-        transform: scale(1.2) translate3d(10px, -3px, 0);
-        rotate: -2deg;
-        border: solid 2px var(--secondary_light-color);
-        box-shadow: 0px 0px 30px 0px var(--black-color-20);
-        position: relative;
-        z-index: 5;
+        @include hover {
+          transform: scale(1.2) translate3d(10px, -3px, 0);
+          rotate: -2deg;
+          border: solid 2px var(--secondary_light-color);
+          box-shadow: 0px 0px 30px 0px var(--black-color-20);
+          position: relative;
+          z-index: 5;
 
-        & .top-anime__list-item-shadow {
-          background: var(--black-color-20);
-        }
+          & .top-anime__list-item-shadow {
+            background: var(--black-color-20);
+          }
 
-        & .top-anime__list-item-href {
-          color: var(--md_grey-color);
+          & .top-anime__list-item-href {
+            color: var(--md_grey-color);
+          }
         }
       }
 

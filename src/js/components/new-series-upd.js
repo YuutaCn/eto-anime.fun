@@ -8,7 +8,7 @@ class NewSeries {
     lastUpdAnime.forEach(({ name, series, cover, href }) => {
       htmlNewSeries += `
       <li class="aside__new-series-list-item">
-        <a class="aside__new-series-list-item-href transition" href="${href}">
+        <a class="aside__new-series-list-item-href transition" href="/${href}">
           <picture>
             <img loading="lazy" src="${cover}" class="image aside__new-series-list-item-img" width="45" height="45" alt="обложка ${name}">
           </picture>

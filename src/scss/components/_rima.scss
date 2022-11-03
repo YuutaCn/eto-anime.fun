@@ -1,0 +1,188 @@
+.rima {
+  position: fixed;
+  z-index: 6;
+  right: 0;
+  bottom: 0px;
+  background: transparent;
+  width: 150px;
+  height: 150px;
+
+  @include small-tablet {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__one {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(-20deg) translateX(200px);
+    transition: all 250ms var(--default-cubic);
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: rotate(0deg) translateX(15px);
+    }
+
+    &-warning {
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      background: var(--black-color-40);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include small-tablet {
+        width: 20px;
+        height: 20px;
+      }
+
+      &-svg {
+        width: 80%;
+        height: 80%;
+        fill: var(--green_input-color);
+        animation: bellAnimation 10s infinite;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__two {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(-20deg) translateY(200px);
+    transition: all 250ms var(--default-cubic);
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: rotate(0deg) translateY(0px);
+
+      .rima__two-donate {
+        transform: translateX(-50px);
+
+        @include small-tablet {
+          transform: translateX(-70px);
+        }
+        transition: all 250ms var(--default-cubic) 300ms;
+      }
+    }
+
+    &-donate {
+      position: absolute;
+      z-index: 6;
+      left: 0;
+      top: -32px;
+      width: 150%;
+      overflow: visible;
+      transform: translateX(150px);
+      transition: all 250ms var(--default-cubic) 0ms;
+
+      @include small-tablet {
+        width: 200%;
+      }
+
+      &-href {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        color: var(--black-color);
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px 6px;
+        background: var(--green_input-color);
+        border: solid 2px rgba($color: #000000, $alpha: 0.0);
+        border-radius: 9px;
+        transition: color 250ms var(--default-cubic),
+          border 250ms var(--default-cubic),
+          background 250ms var(--default-cubic);
+
+          @include small-tablet {
+            font-size: 14px;
+          }
+
+        &:hover {
+          @include hover {
+            color: var(--white-color);
+            border: solid 2px var(--green_input-color);
+            background: rgba($color: #000000, $alpha: 0.7);
+          }
+        }
+      }
+    }
+
+    &-img {
+      position: relative;
+      z-index: 7;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+
+@keyframes bellAnimation {
+
+  0% {
+    rotate: 0deg;
+  }
+
+  4% {
+    rotate: 25deg;
+  }
+
+  5% {
+    rotate: 20deg;
+  }
+
+  6% {
+    rotate: 25deg;
+  }
+
+  10% {
+    rotate: 0deg;
+  }
+
+  16% {
+    rotate: -25deg;
+  }
+
+  17% {
+    rotate: -20deg;
+  }
+
+  18% {
+    rotate: -25deg;
+  }
+
+  20% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
