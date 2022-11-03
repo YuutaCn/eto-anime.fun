@@ -52,3 +52,4 @@ if (document.querySelector('.random__213211197214')) {
 
 import './components/cross-page';
 import './components/donation';
+import './components/go-top';

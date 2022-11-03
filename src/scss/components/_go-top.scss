@@ -1,0 +1,40 @@
+.back-to-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 30px;
+  top: 40px;
+  background: var(--black-color-20);
+  border-radius: 50%;
+  border: solid 3px var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(400px);
+  transition: border 250ms var(--default-cubic),
+    background 250ms var(--default-cubic),
+    transform 500ms var(--default-cubic);
+
+  &:hover {
+    @include hover {
+      border: solid 3px var(--primary-color);
+      background: #00000000;
+
+      & svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+
+  &__svg {
+    width: 60%;
+    height: 60%;
+    fill: var(--secondary-color);
+    transition: fill 250ms var(--default-cubic);
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+}
