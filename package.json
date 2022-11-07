@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "gulp-builder for weblayout",
   "main": "gulpfile.js",
+
   "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",
